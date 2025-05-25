@@ -27,8 +27,8 @@ class HomeFragment : Fragment() {
         super.onCreate(savedInstanceState)
         viewModel.init(getString(R.string.lorem_ipsum))
 
-        //exitTransition = Hold()
-        reenterTransition = MaterialElevationScale(/* growing= */ true)
+        exitTransition = MaterialElevationScale(false)
+        reenterTransition = MaterialElevationScale(true)
     }
 
     override fun onCreateView(

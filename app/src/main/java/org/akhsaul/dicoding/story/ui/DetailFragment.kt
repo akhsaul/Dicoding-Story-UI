@@ -21,10 +21,7 @@ class DetailFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.setStory(args.shareData)
-        sharedElementEnterTransition = MaterialContainerTransform().apply {
-            drawingViewId = R.id.fragmentContainerView
-            containerColor = Color.TRANSPARENT
-        }
+        sharedElementEnterTransition = MaterialContainerTransform(requireContext(), true)
     }
 
     override fun onCreateView(
