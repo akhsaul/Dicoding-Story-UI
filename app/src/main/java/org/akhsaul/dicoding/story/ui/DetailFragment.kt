@@ -1,5 +1,6 @@
 package org.akhsaul.dicoding.story.ui
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +23,7 @@ class DetailFragment : Fragment() {
         viewModel.setStory(args.shareData)
         sharedElementEnterTransition = MaterialContainerTransform().apply {
             drawingViewId = R.id.fragmentContainerView
+            containerColor = Color.TRANSPARENT
         }
     }
 

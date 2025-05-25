@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.transition.Hold
 import com.google.android.material.transition.MaterialElevationScale
 import kotlinx.coroutines.launch
 import org.akhsaul.dicoding.story.ui.databinding.FragmentHomeBinding
@@ -26,7 +27,7 @@ class HomeFragment : Fragment() {
         super.onCreate(savedInstanceState)
         viewModel.init(getString(R.string.lorem_ipsum))
 
-        exitTransition = MaterialElevationScale(/* growing= */ false)
+        //exitTransition = Hold()
         reenterTransition = MaterialElevationScale(/* growing= */ true)
     }
 
